@@ -12,6 +12,7 @@ export interface Fragrance extends NoteProfile {
   gender: string;
   source: "dataset" | "ai";
   image_url: string | null;
+  logo_url: string | null;
 }
 
 export interface MarsaProduct {

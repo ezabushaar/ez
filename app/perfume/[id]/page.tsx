@@ -29,20 +29,41 @@ export default async function PerfumePage({
       </div>
 
       <div className="rounded-3xl border border-sand-200 bg-white p-6 sm:p-8">
-        <div className="text-sm uppercase tracking-wide text-night-800/50">
-          {fragrance.brand}
-          {fragrance.source === "ai" && (
-            <span className="ml-2 rounded-full bg-gold-400/20 px-2 py-0.5 text-[10px] font-medium text-gold-600">
-              AI-sourced
-            </span>
+        <div className="flex flex-col gap-6 sm:flex-row">
+          {fragrance.image_url && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={fragrance.image_url}
+              alt={`${fragrance.brand} ${fragrance.name}`}
+              className="h-48 w-40 shrink-0 self-center rounded-2xl object-contain sm:self-start"
+            />
           )}
-        </div>
-        <h1 className="mt-1 text-3xl font-semibold">{fragrance.name}</h1>
-        <p className="mt-1 text-sm capitalize text-night-800/60">
-          {fragrance.gender}
-        </p>
-        <div className="mt-6">
-          <NotePyramid profile={fragrance} />
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-2 text-sm uppercase tracking-wide text-night-800/50">
+              {fragrance.logo_url ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={fragrance.logo_url}
+                  alt={fragrance.brand}
+                  className="h-6 max-w-[140px] object-contain"
+                />
+              ) : (
+                <span>{fragrance.brand}</span>
+              )}
+              {fragrance.source === "ai" && (
+                <span className="rounded-full bg-gold-400/20 px-2 py-0.5 text-[10px] font-medium text-gold-600">
+                  AI-sourced
+                </span>
+              )}
+            </div>
+            <h1 className="mt-1 text-3xl font-semibold">{fragrance.name}</h1>
+            <p className="mt-1 text-sm capitalize text-night-800/60">
+              {fragrance.gender}
+            </p>
+            <div className="mt-6">
+              <NotePyramid profile={fragrance} />
+            </div>
+          </div>
         </div>
       </div>
 

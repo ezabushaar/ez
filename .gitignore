@@ -9,6 +9,10 @@ out/
 data/*.db
 data/*.db-journal
 
+# generated at runtime (store-specific branding)
+data/branding.json
+public/brand/
+
 # env
 .env
 .env.local

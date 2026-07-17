@@ -65,6 +65,23 @@ function migrate(db: Database.Database) {
     CREATE INDEX IF NOT EXISTS idx_fragrances_name ON fragrances(name);
     CREATE INDEX IF NOT EXISTS idx_fragrances_brand ON fragrances(brand);
   `);
+
+  // Idempotent column additions for features shipped after the initial schema.
+  addColumnIfMissing(db, "fragrances", "logo_url", "TEXT");
+}
+
+function addColumnIfMissing(
+  db: Database.Database,
+  table: string,
+  column: string,
+  type: string,
+) {
+  const columns = db.prepare(`PRAGMA table_info(${table})`).all() as {
+    name: string;
+  }[];
+  if (!columns.some((c) => c.name === column)) {
+    db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${type}`);
+  }
 }
 
 function seedIfEmpty(db: Database.Database) {
@@ -96,12 +113,14 @@ interface FragranceRow {
   accords: string;
   source: string;
   image_url: string | null;
+  logo_url: string | null;
 }
 
 function rowToFragrance(row: FragranceRow): Fragrance {
   return {
     ...row,
     source: row.source === "ai" ? "ai" : "dataset",
+    logo_url: row.logo_url ?? null,
     top_notes: JSON.parse(row.top_notes),
     middle_notes: JSON.parse(row.middle_notes),
     base_notes: JSON.parse(row.base_notes),
@@ -194,6 +213,31 @@ export function countFragrances(): number {
     .prepare("SELECT COUNT(*) AS n FROM fragrances")
     .get() as { n: number };
   return row.n;
+}
+
+export function setFragranceMedia(
+  id: number,
+  imageUrl: string | null,
+  logoUrl: string | null,
+): void {
+  getDb()
+    .prepare(
+      `UPDATE fragrances SET
+         image_url = COALESCE(?, image_url),
+         logo_url = COALESCE(?, logo_url)
+       WHERE id = ?`,
+    )
+    .run(imageUrl, logoUrl, id);
+}
+
+/** Fragrances still missing a bottle image — candidates for media lookup. */
+export function fragrancesNeedingMedia(limit = 20): Fragrance[] {
+  const rows = getDb()
+    .prepare(
+      "SELECT * FROM fragrances WHERE image_url IS NULL ORDER BY id LIMIT ?",
+    )
+    .all(limit) as FragranceRow[];
+  return rows.map(rowToFragrance);
 }
 
 // ---------------------------------------------------------------------------

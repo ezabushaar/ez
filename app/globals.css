@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
+/* Color tokens resolve through runtime brand variables (set in layout.tsx from
+   data/branding.json), falling back to the built-in cream/gold palette. */
 @theme {
-  --color-sand-50: #faf7f2;
+  --color-sand-50: var(--brand-bg, #faf7f2);
   --color-sand-100: #f3ede2;
   --color-sand-200: #e7dcc8;
-  --color-night-800: #2b2118;
-  --color-night-900: #1d1610;
-  --color-gold-400: #c9a35c;
-  --color-gold-500: #b48a3f;
-  --color-gold-600: #96702e;
+  --color-night-800: var(--brand-text, #2b2118);
+  --color-night-900: var(--brand-text, #1d1610);
+  --color-gold-400: var(--brand-accent-soft, #c9a35c);
+  --color-gold-500: var(--brand-accent, #b48a3f);
+  --color-gold-600: var(--brand-accent-dark, #96702e);
 }
 
 body {
-  background-color: var(--color-sand-50);
-  color: var(--color-night-800);
+  background-color: var(--brand-bg, #faf7f2);
+  color: var(--brand-text, #2b2118);
+  font-family: var(--brand-font, Georgia, "Times New Roman", serif);
 }

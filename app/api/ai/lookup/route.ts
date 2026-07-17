@@ -4,8 +4,9 @@ import {
   getFragrance,
   insertFragrance,
   setCachedLookup,
+  setFragranceMedia,
 } from "@/lib/db";
-import { aiAvailable, lookupPerfume } from "@/lib/anthropic";
+import { aiAvailable, findPerfumeMedia, lookupPerfume } from "@/lib/anthropic";
 import { normalizeTerm } from "@/lib/similarity";
 
 export const dynamic = "force-dynamic";
@@ -54,6 +55,13 @@ export async function POST(request: NextRequest) {
       "ai",
     );
     setCachedLookup(normalized, id);
+
+    // Best-effort image + brand logo (won't block the response for long).
+    const media = await findPerfumeMedia(result.brand, result.name);
+    if (media.imageUrl || media.logoUrl) {
+      setFragranceMedia(id, media.imageUrl, media.logoUrl);
+    }
+
     return NextResponse.json({ fragrance: getFragrance(id), cached: false });
   } catch (error) {
     console.error("AI lookup failed:", error);

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandingButton from "@/components/admin/BrandingButton";
 import LoginForm from "@/components/admin/LoginForm";
 import LogoutButton from "@/components/admin/LogoutButton";
 import SyncButton from "@/components/admin/SyncButton";
@@ -42,11 +43,23 @@ export default async function AdminPage() {
         <h2 className="font-medium">Store sync</h2>
         <p className="mt-1 text-sm text-night-800/60">
           {wooConfigured()
-            ? "Pull the latest products from your WordPress (WooCommerce) store."
+            ? "Pull products from your WordPress store. AI reads each product's scent DNA and automatically detects which famous perfume it's inspired by — no manual mapping needed."
             : "WooCommerce is not configured — set WOO_URL, WOO_CONSUMER_KEY and WOO_CONSUMER_SECRET in .env to connect your store."}
         </p>
         <div className="mt-3">
           <SyncButton />
+        </div>
+      </div>
+
+      <div className="mt-4 rounded-2xl border border-sand-200 bg-white p-5">
+        <h2 className="font-medium">Store design</h2>
+        <p className="mt-1 text-sm text-night-800/60">
+          Pull your store&apos;s logo and colors so this finder matches
+          itsmarsa.com. Runs on the server, so it works even though the site
+          blocks outside access.
+        </p>
+        <div className="mt-3">
+          <BrandingButton />
         </div>
       </div>
 
@@ -55,8 +68,8 @@ export default async function AdminPage() {
           Products ({products.length})
         </h2>
         <p className="mt-1 text-sm text-night-800/60">
-          Map each product to the famous perfume it smells like so the dupe
-          finder can recommend it to customers.
+          Auto-detected on sync. Open any product to review its scent DNA or
+          correct the inspired-by match if the AI got one wrong.
         </p>
         <div className="mt-4 overflow-hidden rounded-2xl border border-sand-200 bg-white">
           {products.length === 0 && (
@@ -100,9 +113,13 @@ export default async function AdminPage() {
                         {inspiredBy.brand} {inspiredBy.name}
                       </span>
                     </span>
+                  ) : profile?.notes_override ? (
+                    <span className="rounded-full bg-sand-100 px-3 py-1 text-xs font-medium text-night-800/60">
+                      DNA analyzed · no close match
+                    </span>
                   ) : (
-                    <span className="rounded-full bg-red-50 px-3 py-1 text-xs font-medium text-red-600">
-                      Not mapped
+                    <span className="rounded-full bg-sand-100 px-3 py-1 text-xs font-medium text-night-800/50">
+                      Pending analysis
                     </span>
                   )}
                 </div>

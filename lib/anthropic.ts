@@ -12,6 +12,201 @@ function getClient(): Anthropic {
 }
 
 // ---------------------------------------------------------------------------
+// Product scent-DNA analysis — reads a Marsa product's WordPress name +
+// description and infers its note pyramid, accords, and the famous perfume it
+// is inspired by / smells like. Powers automatic mapping during sync.
+
+export interface ProductDna extends NoteProfile {
+  gender: string;
+  inspiredByBrand: string;
+  inspiredByName: string;
+  confidence: "high" | "medium" | "low";
+}
+
+const DNA_SCHEMA = {
+  type: "object",
+  properties: {
+    top_notes: { type: "array", items: { type: "string" } },
+    middle_notes: { type: "array", items: { type: "string" } },
+    base_notes: { type: "array", items: { type: "string" } },
+    accords: {
+      type: "array",
+      items: { type: "string" },
+      description: "Main accords ordered most to least prominent, max 6",
+    },
+    gender: { type: "string", enum: ["men", "women", "unisex"] },
+    inspiredByBrand: {
+      type: "string",
+      description:
+        "Brand of the famous designer/niche perfume this product most resembles, or empty string if unknown",
+    },
+    inspiredByName: {
+      type: "string",
+      description:
+        "Name of the famous perfume this product most resembles, or empty string if unknown",
+    },
+    confidence: { type: "string", enum: ["high", "medium", "low"] },
+  },
+  required: [
+    "top_notes",
+    "middle_notes",
+    "base_notes",
+    "accords",
+    "gender",
+    "inspiredByBrand",
+    "inspiredByName",
+    "confidence",
+  ],
+  additionalProperties: false,
+} as const;
+
+function stripHtml(html: string): string {
+  return html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z]+;/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export async function analyzeProductDna(
+  name: string,
+  description: string,
+): Promise<ProductDna | null> {
+  const client = getClient();
+  const cleanDescription = stripHtml(description).slice(0, 4000);
+  const response = await client.messages.create({
+    model: MODEL,
+    max_tokens: 4096,
+    system:
+      "You are a fragrance expert analyzing a perfume sold by Marsa, a brand that " +
+      "makes fragrances inspired by famous designer and niche perfumes. Given a " +
+      "product's name and description, determine its scent DNA: the top/middle/base " +
+      "notes and main accords, and identify the single famous perfume it most " +
+      "closely resembles (its 'inspired by'). Use standard fragrance-community " +
+      "terminology (lowercase note names). If the description already lists notes, " +
+      "use them. If notes aren't given, infer them from the described scent and the " +
+      "perfume you believe it clones. If you genuinely cannot tell what it's " +
+      "inspired by, leave inspiredByBrand/inspiredByName empty and set confidence low.",
+    messages: [
+      {
+        role: "user",
+        content:
+          `Product name: ${name}\n\n` +
+          `Description: ${cleanDescription || "(no description provided)"}`,
+      },
+    ],
+    output_config: {
+      format: {
+        type: "json_schema",
+        schema: DNA_SCHEMA as unknown as Record<string, unknown>,
+      },
+    },
+  });
+
+  if (response.stop_reason === "refusal") return null;
+  const text = response.content.find((b) => b.type === "text");
+  if (!text || text.type !== "text") return null;
+  try {
+    return JSON.parse(text.text) as ProductDna;
+  } catch {
+    return null;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Perfume media lookup — best-effort product image + brand logo via web search.
+
+export interface PerfumeMedia {
+  imageUrl: string | null;
+  logoUrl: string | null;
+}
+
+async function isImageUrl(url: string): Promise<boolean> {
+  if (!/^https:\/\//i.test(url)) return false;
+  try {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 6000);
+    const res = await fetch(url, {
+      method: "HEAD",
+      signal: controller.signal,
+      redirect: "follow",
+    });
+    clearTimeout(timer);
+    const type = res.headers.get("content-type") ?? "";
+    return res.ok && type.startsWith("image/");
+  } catch {
+    return false;
+  }
+}
+
+const MEDIA_SCHEMA = {
+  type: "object",
+  properties: {
+    imageUrl: {
+      type: "string",
+      description:
+        "Direct URL to a photo of the perfume bottle (must end in an image file and be publicly hosted), or empty string",
+    },
+    logoUrl: {
+      type: "string",
+      description: "Direct URL to the brand's logo image, or empty string",
+    },
+  },
+  required: ["imageUrl", "logoUrl"],
+  additionalProperties: false,
+} as const;
+
+export async function findPerfumeMedia(
+  brand: string,
+  name: string,
+): Promise<PerfumeMedia> {
+  const client = getClient();
+  try {
+    const response = await client.messages.create({
+      model: MODEL,
+      max_tokens: 4096,
+      system:
+        "You find publicly-hosted image URLs. Use web search to find a direct " +
+        "image URL (ending in .jpg/.jpeg/.png/.webp) of the given perfume bottle " +
+        "and the brand's logo. Prefer official brand sites, retailers, or " +
+        "Wikimedia. Return only direct image file URLs, never page URLs. If you " +
+        "cannot find a real one, return an empty string for that field.",
+      tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 4 }],
+      messages: [
+        {
+          role: "user",
+          content: `Find a bottle image and brand logo for: ${brand} ${name}`,
+        },
+      ],
+      output_config: {
+        format: {
+          type: "json_schema",
+          schema: MEDIA_SCHEMA as unknown as Record<string, unknown>,
+        },
+      },
+    });
+    if (response.stop_reason === "refusal") return { imageUrl: null, logoUrl: null };
+    const text = response.content.find((b) => b.type === "text");
+    if (!text || text.type !== "text") return { imageUrl: null, logoUrl: null };
+    const parsed = JSON.parse(text.text) as {
+      imageUrl: string;
+      logoUrl: string;
+    };
+    const [imageOk, logoOk] = await Promise.all([
+      parsed.imageUrl ? isImageUrl(parsed.imageUrl) : Promise.resolve(false),
+      parsed.logoUrl ? isImageUrl(parsed.logoUrl) : Promise.resolve(false),
+    ]);
+    return {
+      imageUrl: imageOk ? parsed.imageUrl : null,
+      logoUrl: logoOk ? parsed.logoUrl : null,
+    };
+  } catch (error) {
+    console.error("findPerfumeMedia failed:", error);
+    return { imageUrl: null, logoUrl: null };
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Perfume lookup — used when a searched perfume isn't in the local dataset.
 
 export interface AiPerfumeLookup extends NoteProfile {

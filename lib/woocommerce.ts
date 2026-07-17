@@ -8,6 +8,8 @@ export interface WooProduct {
   permalink: string;
   stock_status: string;
   images: { src: string }[];
+  description: string;
+  short_description: string;
 }
 
 export function wooConfigured(): boolean {
