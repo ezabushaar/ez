@@ -1,0 +1,713 @@
+[
+  {
+    "brand": "Maison Francis Kurkdjian",
+    "name": "Baccarat Rouge 540",
+    "gender": "unisex",
+    "top_notes": ["saffron", "jasmine"],
+    "middle_notes": ["amberwood", "ambergris"],
+    "base_notes": ["fir resin", "cedar"],
+    "accords": ["amber", "woody", "warm spicy", "aromatic", "sweet"]
+  },
+  {
+    "brand": "Maison Francis Kurkdjian",
+    "name": "Baccarat Rouge 540 Extrait",
+    "gender": "unisex",
+    "top_notes": ["saffron", "orange blossom"],
+    "middle_notes": ["amberwood", "jasmine"],
+    "base_notes": ["woody notes", "musk", "oakmoss"],
+    "accords": ["amber", "sweet", "woody", "warm spicy", "musky"]
+  },
+  {
+    "brand": "Ariana Grande",
+    "name": "Cloud",
+    "gender": "women",
+    "top_notes": ["lavender", "pear", "bergamot"],
+    "middle_notes": ["whipped cream", "praline", "coconut", "vanilla orchid"],
+    "base_notes": ["musk", "woody notes"],
+    "accords": ["sweet", "vanilla", "musky", "lactonic", "coconut"]
+  },
+  {
+    "brand": "Lattafa",
+    "name": "Khamrah",
+    "gender": "unisex",
+    "top_notes": ["cinnamon", "nutmeg", "bergamot"],
+    "middle_notes": ["dates", "praline", "tuberose", "mahonial"],
+    "base_notes": ["vanilla", "tonka bean", "benzoin", "myrrh", "amberwood"],
+    "accords": ["warm spicy", "vanilla", "sweet", "amber", "cinnamon"]
+  },
+  {
+    "brand": "Kilian",
+    "name": "Angels' Share",
+    "gender": "unisex",
+    "top_notes": ["cognac"],
+    "middle_notes": ["cinnamon", "tonka bean", "oak"],
+    "base_notes": ["praline", "vanilla", "sandalwood"],
+    "accords": ["warm spicy", "sweet", "vanilla", "cinnamon", "woody"]
+  },
+  {
+    "brand": "Dior",
+    "name": "Sauvage",
+    "gender": "men",
+    "top_notes": ["calabrian bergamot", "pepper"],
+    "middle_notes": ["sichuan pepper", "lavender", "pink pepper", "vetiver", "patchouli", "geranium", "elemi"],
+    "base_notes": ["ambroxan", "cedar", "labdanum"],
+    "accords": ["fresh spicy", "amber", "citrus", "aromatic", "musky"]
+  },
+  {
+    "brand": "Dior",
+    "name": "Sauvage Elixir",
+    "gender": "men",
+    "top_notes": ["cinnamon", "nutmeg", "cardamom", "grapefruit"],
+    "middle_notes": ["lavender"],
+    "base_notes": ["licorice", "sandalwood", "amber", "patchouli", "haitian vetiver"],
+    "accords": ["warm spicy", "aromatic", "amber", "cinnamon", "lavender"]
+  },
+  {
+    "brand": "Lattafa",
+    "name": "Asad",
+    "gender": "men",
+    "top_notes": ["black pepper", "pineapple", "bergamot"],
+    "middle_notes": ["coffee", "incense", "labdanum"],
+    "base_notes": ["vanilla", "amber", "patchouli", "benzoin"],
+    "accords": ["amber", "warm spicy", "vanilla", "sweet", "smoky"]
+  },
+  {
+    "brand": "Creed",
+    "name": "Aventus",
+    "gender": "men",
+    "top_notes": ["pineapple", "bergamot", "black currant", "apple"],
+    "middle_notes": ["birch", "patchouli", "moroccan jasmine", "rose"],
+    "base_notes": ["musk", "oakmoss", "ambergris", "vanilla"],
+    "accords": ["fruity", "woody", "smoky", "fresh", "musky"]
+  },
+  {
+    "brand": "Armaf",
+    "name": "Club de Nuit Intense Man",
+    "gender": "men",
+    "top_notes": ["lemon", "pineapple", "bergamot", "black currant", "apple"],
+    "middle_notes": ["birch", "jasmine", "rose"],
+    "base_notes": ["musk", "ambergris", "patchouli", "vanilla"],
+    "accords": ["fruity", "smoky", "woody", "citrus", "musky"]
+  },
+  {
+    "brand": "Chanel",
+    "name": "Bleu de Chanel EDP",
+    "gender": "men",
+    "top_notes": ["grapefruit", "lemon", "mint", "pink pepper"],
+    "middle_notes": ["ginger", "nutmeg", "jasmine", "melon"],
+    "base_notes": ["incense", "amberwood", "cedar", "sandalwood", "patchouli"],
+    "accords": ["woody", "aromatic", "citrus", "fresh spicy", "amber"]
+  },
+  {
+    "brand": "Chanel",
+    "name": "Coco Mademoiselle",
+    "gender": "women",
+    "top_notes": ["orange", "mandarin orange", "orange blossom", "bergamot"],
+    "middle_notes": ["mimosa", "jasmine", "turkish rose", "ylang-ylang"],
+    "base_notes": ["white musk", "patchouli", "vanilla", "vetiver"],
+    "accords": ["citrus", "woody", "fresh", "patchouli", "floral"]
+  },
+  {
+    "brand": "Chanel",
+    "name": "No 5",
+    "gender": "women",
+    "top_notes": ["aldehydes", "ylang-ylang", "neroli", "bergamot", "lemon"],
+    "middle_notes": ["iris", "jasmine", "rose", "lily-of-the-valley"],
+    "base_notes": ["civet", "musk", "sandalwood", "vanilla", "oakmoss", "vetiver", "patchouli"],
+    "accords": ["aldehydic", "floral", "powdery", "woody", "musky"]
+  },
+  {
+    "brand": "Lancome",
+    "name": "La Vie Est Belle",
+    "gender": "women",
+    "top_notes": ["black currant", "pear"],
+    "middle_notes": ["iris", "jasmine", "orange blossom"],
+    "base_notes": ["praline", "vanilla", "patchouli", "tonka bean"],
+    "accords": ["sweet", "vanilla", "fruity", "powdery", "patchouli"]
+  },
+  {
+    "brand": "Yves Saint Laurent",
+    "name": "Black Opium",
+    "gender": "women",
+    "top_notes": ["pear", "pink pepper", "orange blossom"],
+    "middle_notes": ["coffee", "jasmine", "bitter almond", "licorice"],
+    "base_notes": ["vanilla", "patchouli", "cedar", "cashmere wood"],
+    "accords": ["vanilla", "coffee", "sweet", "warm spicy", "white floral"]
+  },
+  {
+    "brand": "Yves Saint Laurent",
+    "name": "Libre",
+    "gender": "women",
+    "top_notes": ["mandarin orange", "lavender", "black currant", "petitgrain"],
+    "middle_notes": ["lavender", "orange blossom", "jasmine"],
+    "base_notes": ["madagascar vanilla", "musk", "cedar", "ambergris"],
+    "accords": ["white floral", "lavender", "vanilla", "citrus", "aromatic"]
+  },
+  {
+    "brand": "Yves Saint Laurent",
+    "name": "Y EDP",
+    "gender": "men",
+    "top_notes": ["apple", "ginger", "bergamot"],
+    "middle_notes": ["sage", "juniper berries", "geranium"],
+    "base_notes": ["amberwood", "tonka bean", "cedar", "vetiver", "olibanum"],
+    "accords": ["aromatic", "fresh spicy", "woody", "fruity", "amber"]
+  },
+  {
+    "brand": "Carolina Herrera",
+    "name": "Good Girl",
+    "gender": "women",
+    "top_notes": ["almond", "coffee", "bergamot", "lemon"],
+    "middle_notes": ["tuberose", "jasmine sambac", "orange blossom", "orris"],
+    "base_notes": ["tonka bean", "cacao", "vanilla", "praline", "sandalwood"],
+    "accords": ["white floral", "sweet", "vanilla", "warm spicy", "tuberose"]
+  },
+  {
+    "brand": "Carolina Herrera",
+    "name": "212 VIP Men",
+    "gender": "men",
+    "top_notes": ["passionfruit", "vodka", "caviar lime"],
+    "middle_notes": ["gin", "mint", "ginger"],
+    "base_notes": ["vanilla", "king wood", "amber"],
+    "accords": ["vanilla", "sweet", "aromatic", "fresh", "woody"]
+  },
+  {
+    "brand": "Dior",
+    "name": "Miss Dior EDP",
+    "gender": "women",
+    "top_notes": ["lily-of-the-valley", "peony", "iris"],
+    "middle_notes": ["grasse rose", "apricot", "peach"],
+    "base_notes": ["musk", "vanilla", "tonka bean"],
+    "accords": ["floral", "rose", "sweet", "powdery", "fruity"]
+  },
+  {
+    "brand": "Dior",
+    "name": "J'adore",
+    "gender": "women",
+    "top_notes": ["pear", "melon", "magnolia", "peach", "mandarin orange", "bergamot"],
+    "middle_notes": ["jasmine", "lily-of-the-valley", "tuberose", "freesia", "rose", "orchid", "plum", "violet"],
+    "base_notes": ["musk", "vanilla", "blackberry", "cedar"],
+    "accords": ["white floral", "floral", "fruity", "sweet", "fresh"]
+  },
+  {
+    "brand": "Dior",
+    "name": "Hypnotic Poison",
+    "gender": "women",
+    "top_notes": ["coconut", "plum", "apricot"],
+    "middle_notes": ["tuberose", "jasmine", "lily-of-the-valley", "rose", "caraway"],
+    "base_notes": ["vanilla", "almond", "sandalwood", "musk"],
+    "accords": ["vanilla", "sweet", "almond", "coconut", "white floral"]
+  },
+  {
+    "brand": "Dior",
+    "name": "Homme Intense",
+    "gender": "men",
+    "top_notes": ["lavender"],
+    "middle_notes": ["iris", "ambrette", "pear"],
+    "base_notes": ["virginia cedar", "vetiver"],
+    "accords": ["powdery", "iris", "woody", "lavender", "fresh"]
+  },
+  {
+    "brand": "Mugler",
+    "name": "Alien",
+    "gender": "women",
+    "top_notes": ["jasmine sambac"],
+    "middle_notes": ["cashmeran wood"],
+    "base_notes": ["white amber"],
+    "accords": ["white floral", "amber", "woody", "jasmine", "warm spicy"]
+  },
+  {
+    "brand": "Mugler",
+    "name": "Angel",
+    "gender": "women",
+    "top_notes": ["cotton candy", "melon", "coconut", "jasmine", "bergamot", "pineapple"],
+    "middle_notes": ["honey", "blackberry", "plum", "apricot", "peach", "red berries"],
+    "base_notes": ["patchouli", "chocolate", "caramel", "vanilla", "tonka bean", "musk"],
+    "accords": ["sweet", "patchouli", "caramel", "fruity", "chocolate"]
+  },
+  {
+    "brand": "Tom Ford",
+    "name": "Tobacco Vanille",
+    "gender": "unisex",
+    "top_notes": ["tobacco leaf", "spicy notes"],
+    "middle_notes": ["vanilla", "cacao", "tonka bean", "tobacco blossom"],
+    "base_notes": ["dried fruits", "woody notes"],
+    "accords": ["tobacco", "vanilla", "sweet", "warm spicy", "amber"]
+  },
+  {
+    "brand": "Tom Ford",
+    "name": "Lost Cherry",
+    "gender": "unisex",
+    "top_notes": ["black cherry", "cherry liqueur", "bitter almond"],
+    "middle_notes": ["sour cherry", "plum", "turkish rose", "jasmine sambac"],
+    "base_notes": ["peru balsam", "roasted tonka", "sandalwood", "vetiver", "cedar"],
+    "accords": ["cherry", "sweet", "almond", "fruity", "vanilla"]
+  },
+  {
+    "brand": "Tom Ford",
+    "name": "Oud Wood",
+    "gender": "unisex",
+    "top_notes": ["agarwood (oud)", "rosewood", "cardamom"],
+    "middle_notes": ["sandalwood", "vetiver", "chinese pepper"],
+    "base_notes": ["tonka bean", "vanilla", "amber"],
+    "accords": ["woody", "oud", "warm spicy", "vanilla", "amber"]
+  },
+  {
+    "brand": "Tom Ford",
+    "name": "Ombre Leather",
+    "gender": "unisex",
+    "top_notes": ["cardamom"],
+    "middle_notes": ["leather", "jasmine sambac"],
+    "base_notes": ["amber", "moss", "patchouli"],
+    "accords": ["leather", "amber", "warm spicy", "woody", "animalic"]
+  },
+  {
+    "brand": "Maison Margiela",
+    "name": "Replica By the Fireplace",
+    "gender": "unisex",
+    "top_notes": ["cloves", "pink pepper", "orange blossom"],
+    "middle_notes": ["chestnut", "guaiac wood", "juniper"],
+    "base_notes": ["vanilla", "peru balsam", "cashmeran"],
+    "accords": ["smoky", "woody", "sweet", "vanilla", "warm spicy"]
+  },
+  {
+    "brand": "Maison Margiela",
+    "name": "Replica Jazz Club",
+    "gender": "men",
+    "top_notes": ["pink pepper", "lemon", "neroli"],
+    "middle_notes": ["rum", "clary sage", "vetiver"],
+    "base_notes": ["tobacco leaf", "vanilla", "styrax"],
+    "accords": ["tobacco", "sweet", "vanilla", "rum", "aromatic"]
+  },
+  {
+    "brand": "Le Labo",
+    "name": "Santal 33",
+    "gender": "unisex",
+    "top_notes": ["violet accord", "cardamom"],
+    "middle_notes": ["iris", "ambrox"],
+    "base_notes": ["sandalwood", "cedarwood", "leather", "papyrus"],
+    "accords": ["woody", "sandalwood", "leather", "musky", "powdery"]
+  },
+  {
+    "brand": "Le Labo",
+    "name": "Another 13",
+    "gender": "unisex",
+    "top_notes": ["ambroxan", "pear", "apple"],
+    "middle_notes": ["jasmine", "moss"],
+    "base_notes": ["ambergris", "musk", "ambrette"],
+    "accords": ["musky", "amber", "woody", "fresh", "animalic"]
+  },
+  {
+    "brand": "Byredo",
+    "name": "Gypsy Water",
+    "gender": "unisex",
+    "top_notes": ["bergamot", "lemon", "pepper", "juniper berries"],
+    "middle_notes": ["incense", "pine needles", "orris"],
+    "base_notes": ["vanilla", "sandalwood", "amber"],
+    "accords": ["woody", "aromatic", "vanilla", "fresh", "citrus"]
+  },
+  {
+    "brand": "Byredo",
+    "name": "Mojave Ghost",
+    "gender": "unisex",
+    "top_notes": ["ambrette", "jamaican naseberry"],
+    "middle_notes": ["magnolia", "sandalwood", "violet"],
+    "base_notes": ["crisp amber", "cedarwood"],
+    "accords": ["woody", "musky", "floral", "powdery", "amber"]
+  },
+  {
+    "brand": "Byredo",
+    "name": "Bal d'Afrique",
+    "gender": "unisex",
+    "top_notes": ["african marigold", "bergamot", "lemon", "neroli", "buchu"],
+    "middle_notes": ["violet", "jasmine", "cyclamen"],
+    "base_notes": ["black amber", "musk", "vetiver", "moroccan cedarwood"],
+    "accords": ["citrus", "woody", "floral", "fresh", "musky"]
+  },
+  {
+    "brand": "Parfums de Marly",
+    "name": "Delina",
+    "gender": "women",
+    "top_notes": ["rhubarb", "lychee", "bergamot", "nutmeg"],
+    "middle_notes": ["turkish rose", "peony", "vanilla", "petalia"],
+    "base_notes": ["white musk", "cashmeran", "incense", "vetiver"],
+    "accords": ["rose", "fruity", "sweet", "musky", "floral"]
+  },
+  {
+    "brand": "Parfums de Marly",
+    "name": "Layton",
+    "gender": "unisex",
+    "top_notes": ["apple", "lavender", "bergamot", "mandarin orange"],
+    "middle_notes": ["geranium", "violet", "jasmine"],
+    "base_notes": ["vanilla", "cardamom", "sandalwood", "pepper", "guaiac wood", "patchouli"],
+    "accords": ["vanilla", "aromatic", "fruity", "warm spicy", "woody"]
+  },
+  {
+    "brand": "Parfums de Marly",
+    "name": "Althair",
+    "gender": "men",
+    "top_notes": ["candied almond", "cinnamon", "orange blossom", "bergamot"],
+    "middle_notes": ["bourbon vanilla", "praline", "elemi"],
+    "base_notes": ["gaiac wood", "tonka bean", "musk", "ambergris"],
+    "accords": ["vanilla", "sweet", "warm spicy", "almond", "amber"]
+  },
+  {
+    "brand": "Xerjoff",
+    "name": "Erba Pura",
+    "gender": "unisex",
+    "top_notes": ["sicilian orange", "calabrian bergamot", "lemon"],
+    "middle_notes": ["fruits"],
+    "base_notes": ["white musk", "madagascar vanilla", "amber"],
+    "accords": ["fruity", "sweet", "citrus", "musky", "vanilla"]
+  },
+  {
+    "brand": "Lattafa",
+    "name": "Yara",
+    "gender": "women",
+    "top_notes": ["orchid", "heliotrope", "tangerine"],
+    "middle_notes": ["gourmand accord", "tropical fruits"],
+    "base_notes": ["vanilla", "musk", "sandalwood"],
+    "accords": ["vanilla", "sweet", "fruity", "powdery", "musky"]
+  },
+  {
+    "brand": "Lattafa",
+    "name": "Ameer Al Oudh Intense Oud",
+    "gender": "unisex",
+    "top_notes": ["oud", "spicy notes"],
+    "middle_notes": ["sugar", "woody notes"],
+    "base_notes": ["vanilla", "oud", "sandalwood", "amber"],
+    "accords": ["oud", "sweet", "vanilla", "woody", "warm spicy"]
+  },
+  {
+    "brand": "Jean Paul Gaultier",
+    "name": "Le Male",
+    "gender": "men",
+    "top_notes": ["mint", "lavender", "bergamot"],
+    "middle_notes": ["cinnamon", "cumin", "orange blossom"],
+    "base_notes": ["vanilla", "tonka bean", "amber", "sandalwood", "cedar"],
+    "accords": ["vanilla", "lavender", "aromatic", "warm spicy", "fresh spicy"]
+  },
+  {
+    "brand": "Jean Paul Gaultier",
+    "name": "Ultra Male",
+    "gender": "men",
+    "top_notes": ["pear", "mint", "lavender", "bergamot", "lemon"],
+    "middle_notes": ["cinnamon", "clary sage", "caraway"],
+    "base_notes": ["black vanilla", "amber", "cedar", "patchouli"],
+    "accords": ["sweet", "vanilla", "fruity", "lavender", "warm spicy"]
+  },
+  {
+    "brand": "Versace",
+    "name": "Eros",
+    "gender": "men",
+    "top_notes": ["mint", "green apple", "lemon"],
+    "middle_notes": ["tonka bean", "ambroxan", "geranium"],
+    "base_notes": ["madagascar vanilla", "virginian cedar", "atlas cedar", "vetiver", "oakmoss"],
+    "accords": ["sweet", "vanilla", "fresh", "aromatic", "mint"]
+  },
+  {
+    "brand": "Versace",
+    "name": "Dylan Blue",
+    "gender": "men",
+    "top_notes": ["calabrian bergamot", "grapefruit", "fig leaf", "aquatic notes"],
+    "middle_notes": ["violet leaf", "black pepper", "ambroxan", "patchouli"],
+    "base_notes": ["incense", "musk", "tonka bean", "saffron"],
+    "accords": ["aromatic", "fresh", "citrus", "musky", "woody"]
+  },
+  {
+    "brand": "Paco Rabanne",
+    "name": "1 Million",
+    "gender": "men",
+    "top_notes": ["blood mandarin", "grapefruit", "mint"],
+    "middle_notes": ["cinnamon", "spicy notes", "rose"],
+    "base_notes": ["amber", "leather", "woody notes", "indian patchouli"],
+    "accords": ["warm spicy", "amber", "cinnamon", "sweet", "leather"]
+  },
+  {
+    "brand": "Paco Rabanne",
+    "name": "Invictus",
+    "gender": "men",
+    "top_notes": ["sea notes", "grapefruit", "mandarin orange"],
+    "middle_notes": ["bay leaf", "hedione jasmine"],
+    "base_notes": ["ambergris", "guaiac wood", "oakmoss", "patchouli"],
+    "accords": ["fresh", "marine", "citrus", "woody", "aromatic"]
+  },
+  {
+    "brand": "Viktor & Rolf",
+    "name": "Spicebomb Extreme",
+    "gender": "men",
+    "top_notes": ["black pepper", "lavender"],
+    "middle_notes": ["cinnamon", "saffron"],
+    "base_notes": ["tobacco", "vanilla", "bourbon vanilla", "amber"],
+    "accords": ["warm spicy", "vanilla", "tobacco", "cinnamon", "amber"]
+  },
+  {
+    "brand": "Viktor & Rolf",
+    "name": "Flowerbomb",
+    "gender": "women",
+    "top_notes": ["tea", "bergamot", "osmanthus"],
+    "middle_notes": ["sambac jasmine", "orchid", "freesia", "rose"],
+    "base_notes": ["patchouli", "musk", "vanilla"],
+    "accords": ["sweet", "white floral", "patchouli", "vanilla", "floral"]
+  },
+  {
+    "brand": "Giorgio Armani",
+    "name": "Acqua di Gio",
+    "gender": "men",
+    "top_notes": ["lime", "lemon", "bergamot", "jasmine", "orange", "mandarin orange", "neroli"],
+    "middle_notes": ["sea notes", "jasmine", "calone", "peach", "freesia", "rosemary", "rose"],
+    "base_notes": ["white musk", "cedar", "oakmoss", "patchouli", "amber"],
+    "accords": ["citrus", "marine", "fresh", "aromatic", "salty"]
+  },
+  {
+    "brand": "Giorgio Armani",
+    "name": "Si",
+    "gender": "women",
+    "top_notes": ["cassis"],
+    "middle_notes": ["freesia", "may rose"],
+    "base_notes": ["vanilla", "patchouli", "woody notes", "ambroxan"],
+    "accords": ["fruity", "sweet", "vanilla", "floral", "woody"]
+  },
+  {
+    "brand": "Dolce & Gabbana",
+    "name": "Light Blue",
+    "gender": "women",
+    "top_notes": ["sicilian lemon", "apple", "cedar", "bellflower"],
+    "middle_notes": ["bamboo", "jasmine", "white rose"],
+    "base_notes": ["cedar", "musk", "amber"],
+    "accords": ["citrus", "fresh", "woody", "fruity", "floral"]
+  },
+  {
+    "brand": "Ariana Grande",
+    "name": "Cloud Intense",
+    "gender": "women",
+    "top_notes": ["black currant", "pear", "bergamot"],
+    "middle_notes": ["whipped cream", "coconut", "praline"],
+    "base_notes": ["vanilla", "musk", "benzoin"],
+    "accords": ["sweet", "vanilla", "coconut", "fruity", "musky"]
+  },
+  {
+    "brand": "Billie Eilish",
+    "name": "Eilish",
+    "gender": "women",
+    "top_notes": ["sugared petals", "mandarin", "red berries"],
+    "middle_notes": ["cacao", "spices", "vanilla"],
+    "base_notes": ["warm musk", "amber", "woody notes"],
+    "accords": ["vanilla", "sweet", "amber", "musky", "warm spicy"]
+  },
+  {
+    "brand": "Prada",
+    "name": "Paradoxe",
+    "gender": "women",
+    "top_notes": ["pear", "tangerine", "neroli bud"],
+    "middle_notes": ["jasmine", "orange blossom", "jasmine sambac"],
+    "base_notes": ["amber", "white musk", "bourbon vanilla"],
+    "accords": ["white floral", "musky", "vanilla", "amber", "fresh"]
+  },
+  {
+    "brand": "Valentino",
+    "name": "Born in Roma Donna",
+    "gender": "women",
+    "top_notes": ["black currant", "pink pepper"],
+    "middle_notes": ["jasmine sambac", "jasmine"],
+    "base_notes": ["bourbon vanilla", "guaiac wood", "cashmeran"],
+    "accords": ["vanilla", "white floral", "sweet", "woody", "musky"]
+  },
+  {
+    "brand": "Emporio Armani",
+    "name": "Stronger With You Intensely",
+    "gender": "men",
+    "top_notes": ["pink pepper", "juniper", "violet"],
+    "middle_notes": ["cinnamon", "sage", "lavender"],
+    "base_notes": ["vanilla", "tonka bean", "amber", "suede"],
+    "accords": ["vanilla", "sweet", "warm spicy", "amber", "cinnamon"]
+  },
+  {
+    "brand": "Ajmal",
+    "name": "Amber Wood",
+    "gender": "unisex",
+    "top_notes": ["cedar", "green notes", "pineapple"],
+    "middle_notes": ["cinnamon", "jasmine", "orris"],
+    "base_notes": ["sandalwood", "agarwood (oud)", "amber", "vanilla", "musk"],
+    "accords": ["woody", "amber", "vanilla", "oud", "warm spicy"]
+  },
+  {
+    "brand": "Swiss Arabian",
+    "name": "Shaghaf Oud",
+    "gender": "unisex",
+    "top_notes": ["saffron", "agarwood (oud)"],
+    "middle_notes": ["rose", "oud"],
+    "base_notes": ["amber", "vanilla", "musk"],
+    "accords": ["oud", "amber", "rose", "warm spicy", "vanilla"]
+  },
+  {
+    "brand": "Initio",
+    "name": "Oud for Greatness",
+    "gender": "unisex",
+    "top_notes": ["saffron", "nutmeg", "lavender"],
+    "middle_notes": ["agarwood (oud)"],
+    "base_notes": ["musk", "patchouli"],
+    "accords": ["oud", "warm spicy", "woody", "aromatic", "musky"]
+  },
+  {
+    "brand": "Guerlain",
+    "name": "Shalimar",
+    "gender": "women",
+    "top_notes": ["citruses", "bergamot", "lemon"],
+    "middle_notes": ["iris", "jasmine", "rose", "patchouli", "vetiver"],
+    "base_notes": ["vanilla", "incense", "opoponax", "tonka bean", "leather", "civet"],
+    "accords": ["vanilla", "powdery", "amber", "smoky", "citrus"]
+  },
+  {
+    "brand": "Guerlain",
+    "name": "Mon Guerlain",
+    "gender": "women",
+    "top_notes": ["lavender", "bergamot"],
+    "middle_notes": ["iris", "jasmine sambac", "rose"],
+    "base_notes": ["tahitian vanilla", "coumarin", "australian sandalwood", "benzoin", "licorice"],
+    "accords": ["vanilla", "lavender", "sweet", "powdery", "aromatic"]
+  },
+  {
+    "brand": "Kayali",
+    "name": "Vanilla 28",
+    "gender": "unisex",
+    "top_notes": ["vanilla orchid", "jasmine"],
+    "middle_notes": ["brown sugar", "tonka bean"],
+    "base_notes": ["amber", "brazilian rosewood", "patchouli", "musk"],
+    "accords": ["vanilla", "sweet", "amber", "warm spicy", "woody"]
+  },
+  {
+    "brand": "Kayali",
+    "name": "Eden Juicy Apple 01",
+    "gender": "women",
+    "top_notes": ["red apple", "bergamot", "black currant"],
+    "middle_notes": ["jasmine", "damask rose", "lily-of-the-valley"],
+    "base_notes": ["sandalwood", "musk", "amberwood"],
+    "accords": ["fruity", "sweet", "fresh", "floral", "musky"]
+  },
+  {
+    "brand": "Ralph Lauren",
+    "name": "Polo Blue",
+    "gender": "men",
+    "top_notes": ["cucumber", "melon", "mandarin orange"],
+    "middle_notes": ["basil", "sage", "geranium"],
+    "base_notes": ["suede", "musk", "woodsy notes"],
+    "accords": ["fresh", "aromatic", "marine", "green", "musky"]
+  },
+  {
+    "brand": "Ralph Lauren",
+    "name": "Ralph's Club Elixir",
+    "gender": "men",
+    "top_notes": ["lavender"],
+    "middle_notes": ["cacao"],
+    "base_notes": ["vetiver", "vanilla"],
+    "accords": ["vanilla", "lavender", "sweet", "woody", "aromatic"]
+  },
+  {
+    "brand": "Burberry",
+    "name": "Her",
+    "gender": "women",
+    "top_notes": ["strawberry", "raspberry", "blackberry", "black currant"],
+    "middle_notes": ["jasmine", "violet"],
+    "base_notes": ["musk", "amber", "vanilla", "cashmeran", "oakmoss"],
+    "accords": ["fruity", "sweet", "musky", "vanilla", "berry"]
+  },
+  {
+    "brand": "Chloe",
+    "name": "Chloe EDP",
+    "gender": "women",
+    "top_notes": ["peony", "lychee", "freesia"],
+    "middle_notes": ["rose", "lily-of-the-valley", "magnolia"],
+    "base_notes": ["virginia cedar", "amber", "honey"],
+    "accords": ["rose", "floral", "powdery", "fresh", "sweet"]
+  },
+  {
+    "brand": "Ariana Grande",
+    "name": "Mod Vanilla",
+    "gender": "women",
+    "top_notes": ["vanilla bean", "sea salt"],
+    "middle_notes": ["orange blossom", "jasmine", "musk"],
+    "base_notes": ["vanilla", "cashmere wood", "praline"],
+    "accords": ["vanilla", "sweet", "musky", "powdery", "white floral"]
+  },
+  {
+    "brand": "Azzaro",
+    "name": "The Most Wanted EDP Intense",
+    "gender": "men",
+    "top_notes": ["cardamom"],
+    "middle_notes": ["toffee"],
+    "base_notes": ["amberwood"],
+    "accords": ["amber", "sweet", "warm spicy", "caramel", "woody"]
+  },
+  {
+    "brand": "Rasasi",
+    "name": "Hawas for Him",
+    "gender": "men",
+    "top_notes": ["apple", "bergamot", "lemon", "cinnamon"],
+    "middle_notes": ["orange blossom", "cardamom", "aquatic notes"],
+    "base_notes": ["ambergris", "musk", "woody notes", "patchouli", "driftwood"],
+    "accords": ["fresh", "marine", "fruity", "citrus", "amber"]
+  },
+  {
+    "brand": "Montblanc",
+    "name": "Legend",
+    "gender": "men",
+    "top_notes": ["lavender", "pineapple", "bergamot", "lemon verbena"],
+    "middle_notes": ["oakmoss", "geranium", "coumarin", "apple", "rose"],
+    "base_notes": ["tonka bean", "sandalwood", "evernyl"],
+    "accords": ["aromatic", "fresh", "lavender", "fruity", "woody"]
+  },
+  {
+    "brand": "Hermes",
+    "name": "Terre d'Hermes",
+    "gender": "men",
+    "top_notes": ["orange", "grapefruit"],
+    "middle_notes": ["pepper", "pelargonium", "flint"],
+    "base_notes": ["vetiver", "cedar", "patchouli", "benzoin"],
+    "accords": ["woody", "citrus", "earthy", "fresh spicy", "vetiver"]
+  },
+  {
+    "brand": "Prada",
+    "name": "L'Homme",
+    "gender": "men",
+    "top_notes": ["neroli", "black pepper", "cardamom"],
+    "middle_notes": ["iris", "geranium", "mate"],
+    "base_notes": ["amber", "cedar", "patchouli", "sandalwood"],
+    "accords": ["powdery", "iris", "fresh", "woody", "aromatic"]
+  },
+  {
+    "brand": "Narciso Rodriguez",
+    "name": "For Her EDP",
+    "gender": "women",
+    "top_notes": ["rose", "peach"],
+    "middle_notes": ["musk", "amber"],
+    "base_notes": ["sandalwood", "patchouli"],
+    "accords": ["musky", "powdery", "floral", "woody", "rose"]
+  },
+  {
+    "brand": "Ex Nihilo",
+    "name": "Fleur Narcotique",
+    "gender": "unisex",
+    "top_notes": ["lychee", "peach", "bergamot"],
+    "middle_notes": ["peony", "orange blossom", "jasmine"],
+    "base_notes": ["moss", "musk", "woody notes"],
+    "accords": ["floral", "fruity", "fresh", "musky", "sweet"]
+  },
+  {
+    "brand": "Jo Malone",
+    "name": "Wood Sage & Sea Salt",
+    "gender": "unisex",
+    "top_notes": ["ambrette seeds"],
+    "middle_notes": ["sea salt"],
+    "base_notes": ["sage"],
+    "accords": ["fresh", "salty", "marine", "aromatic", "woody"]
+  },
+  {
+    "brand": "Bianca Ingrosso",
+    "name": "Sunkissed Beach",
+    "gender": "unisex",
+    "top_notes": ["coconut", "bergamot"],
+    "middle_notes": ["tiare flower", "jasmine"],
+    "base_notes": ["vanilla", "musk", "sandalwood"],
+    "accords": ["coconut", "sweet", "vanilla", "white floral", "tropical"]
+  }
+]
