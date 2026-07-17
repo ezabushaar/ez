@@ -1,0 +1,29 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file: .env
+    volumes:
+      # Persists the SQLite database (data/marsa.db) across rebuilds.
+      # The repo's data/ dir already contains the starter dataset.
+      - ./data:/app/data
+
+  # Optional HTTPS reverse proxy — enable with: docker compose --profile https up -d
+  # Requires a domain pointed at this server; edit Caddyfile first.
+  caddy:
+    image: caddy:2
+    profiles: ["https"]
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

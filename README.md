@@ -22,6 +22,8 @@ npm run dev            # http://localhost:3000
 
 The database is created and seeded automatically on first run at `data/marsa.db`.
 
+**Deploying to a server?** See [DEPLOY.md](./DEPLOY.md) — Docker Compose setup with optional automatic HTTPS, written for a Vultr VPS.
+
 ### Environment variables (`.env`)
 
 | Variable | Required | Purpose |

@@ -1,0 +1,5 @@
+# Replace with your real (sub)domain, e.g. match.marsa.com — Caddy will
+# obtain and renew the HTTPS certificate automatically.
+match.example.com {
+	reverse_proxy app:3000
+}
